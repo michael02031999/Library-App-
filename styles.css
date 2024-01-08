@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+   /*  background: red !important;  */
+    background-image: url('./images/library_image.jpeg') !important;
+}
+
+#h1_container {
+    margin-top: 50px;
+}
+
+h1 {
+    display: block !important;
+    padding: 20px;
+    color: #D6BA73 !important;
+    border: 5px solid;
+    width: fit-content;
+    margin: 40px auto;
+    margin-top: 40px;
+}
+
+h1, form {
+    text-align: center;
+}
+
+#newBookButton {
+    background: blue; 
+    color: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+#libraryBody {
+    padding: 50px;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center; 
+    grid-auto-rows: 1fr;
+   justify-items: center;
+}
+
+#newBookForm {
+    padding: 60px;
+    background-image: linear-gradient(to top right, green, rgb(49, 152, 216));
+    position: absolute; 
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#form_title {
+    font-size: 25px;
+}
+
+#form_elements_container label {
+    /* text-align: left; */
+}
+
+#newBookForm input {
+    background: rgb(241, 241, 241);
+    padding: 5px;
+    border: 2.5px solid rgb(241, 241, 241);
+}
+
+#newBookForm input::-webkit-input-placeholder {
+    font-weight: bold;
+}
+
+#submitButton {
+    font-weight: bold;
+    background: linear-gradient(to top right, green, rgb(49, 152, 216)) !important;/* Replace these colors with your desired gradient */
+    color: white;
+    width: 50%; 
+    margin: 0 auto; 
+}
+
+#form_elements_container {
+    background: white;
+    padding: 20px;
+}
+
+#authorLabel, #titleLabel, #numPagesLabel, #was_read_title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+#was_read {
+    display: flex; 
+}
+
+#was_read_title {
+    display: inline;
+}
+
+#myBtn {
+    position: absolute; 
+    padding: 10px; 
+    border: 5px solid green;
+    margin: 0 auto;
+    text-align: center; 
+    display:block;
+    bottom: 40px;
+    right: 30px;
+    border-radius: 20px;
+    background: lightgreen; 
+    color: white; 
+}
+
+#myModal {
+    position: absolute;
+    height: 100%;
+    background: turquoise;
+}
+
+/* NEW CSS */
+
+#card {
+    display: flex; 
+    height: fit-content;
+    width: 300px; 
+    background: gold;
+    justify-content: center;
+    align-items: center; 
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+#card_info {
+    display: flex; 
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background: red; 
+    height: fit-content; 
+    width: 90%;
+    padding: 20px;
+    position: relative;
+    border: 20px solid gold;
+    margin: 20px;
+    padding-bottom: 0px;
+}
+
+#card_info p {
+    display: flex; 
+    flex-direction: column; 
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    display: flex; 
+    flex-direction: column;
+    font-style: italic;
+    
+}
+
+#card_info p span {
+    color: black;
+    font-weight: normal;
+    font-size: 30px;
+    text-decoration: none !important;
+    font-style: normal;
+}
+
+#x_button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 35px;
+    color: orange;
+}
+
+#was_readCheck {
+    font-size: 35px;
+    height: 30px; 
+    width: 30px; 
+    padding: 0; 
+    margin: 0;
+    background: green;
+    margin-top: 30px; 
+}
+
+#toggle {
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    bottom: 19px;
+    left: 80px;
+}
+ 
+/* Hide the checkbox input */
+#toggle input {
+    display: none;
+}
+ 
+/* Describe slider's look and position. */
+#slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: gray;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+#slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+ 
+/* Modify the slider's background color to 
+      green once the checkbox has been selected. */
+input:checked+#slider {
+    background-color: green;
+}
+ 
+/* When the checkbox is checked, shift the 
+      white ball towards the right within the slider. */
+input:checked+#slider:before {
+    transform: translateX(26px);
+}
